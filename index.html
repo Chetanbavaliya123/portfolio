@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chetan Bavaliya — Android Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;700;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>CB<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#education" class="nav-link">Education & Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="theme-icon">☀️</span>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section id="hero" class="hero">
+        <canvas id="particleCanvas"></canvas>
+        <div class="hero-content">
+            <div class="hero-badge fade-in">👋 Welcome to my portfolio</div>
+            <h1 class="hero-heading fade-in">
+                Hi, I'm <span class="gradient-text">Chetan Bavaliya</span>
+            </h1>
+            <p class="hero-sub fade-in">
+                <span id="typingText"></span><span class="cursor">|</span>
+            </p>
+            <p class="hero-desc fade-in">
+                B.Tech Information Technology (Semester 6) student passionate about building mobile applications and
+                AI-based solutions.
+            </p>
+            <div class="hero-buttons fade-in">
+                <a onclick="generateResume()" class="btn btn-primary" download>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    Download Resume
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                    Contact Me
+                </a>
+            </div>
+            <div class="hero-scroll fade-in">
+                <a href="#about" class="scroll-indicator">
+                    <span>Scroll Down</span>
+                    <div class="scroll-arrow"></div>
+                </a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="code-card fade-in">
+                <div class="code-header">
+                    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                    <span class="code-title">Chetan.java</span>
+                </div>
+                <pre class="code-body"><span class="c-keyword">public class</span> <span class="c-class">Chetan</span> {
+
+  <span class="c-keyword">String</span> role = <span class="c-string">"Android Dev"</span>;
+  <span class="c-keyword">int</span> semester = <span class="c-num">6</span>;
+  <span class="c-keyword">boolean</span> passionate = <span class="c-bool">true</span>;
+
+  <span class="c-method">String[]</span> skills = {
+    <span class="c-string">"Java"</span>, <span class="c-string">"Firebase"</span>,
+    <span class="c-string">"Android"</span>, <span class="c-string">"SQL"</span>
+  };
+
+  <span class="c-method">void</span> <span class="c-fn">build</span>() {
+    <span class="c-comment">// Dream → Code → Ship 🚀</span>
+  }
+}</pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">About</span>
+                <h2 class="section-title">Who Am I?</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p>
+                        I am a motivated IT student currently in <strong>Semester 6</strong>, specializing in Android
+                        Development. I have experience in Java, Firebase, Room Database, and building real-world
+                        applications like <strong>Weather Finder App</strong> and <strong>Shake Detector App</strong>.
+                    </p>
+                    <p>
+                        My passion lies in crafting mobile experiences that solve real-world problems — especially for
+                        underserved communities. I love clean code, thoughtful design, and continuous learning.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number" data-target="4">0</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="6">0</span>
+                            <span class="stat-label">Semester</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="9">0</span>
+                            <span class="stat-label">Skills</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-skills reveal">
+                    <h3>Quick Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">🌐 HTML</span>
+                        <span class="skill-tag">🎨 CSS</span>
+                        <span class="skill-tag">⚡ JavaScript</span>
+                        <span class="skill-tag">🐍 Python</span>
+                        <span class="skill-tag">☕ Java</span>
+                        <span class="skill-tag">💙 Flutter</span>
+                        <span class="skill-tag">📱 Android Studio</span>
+                        <span class="skill-tag">🔥 Firebase</span>
+                        <span class="skill-tag">📄 MS Word</span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Skills</span>
+                <h2 class="section-title">My Expertise</h2>
+            </div>
+            <div class="skills-grid">
+
+                <div class="skill-category reveal">
+                    <div class="category-icon">💻</div>
+                    <h3>Programming</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header"><span>Java</span><span>90%</span></div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header"><span>JavaScript</span><span>70%</span></div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header"><span>SQL</span><span>75%</span></div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category reveal">
+                    <div class="category-icon">📱</div>
+                    <h3>Mobile Dev</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header"><span>Android Dev</span><span>85%</span></div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header"><span>Firebase</span><span>80%</span></div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header"><span>Material Design</span><span>78%</span></div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="78"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category reveal">
+                    <div class="category-icon">🌐</div>
+                    <h3>Web Dev</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header"><span>HTML5</span><span>80%</span></div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header"><span>CSS3</span><span>75%</span></div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-bar-header"><span>Responsive Design</span><span>72%</span></div>
+                            <div class="skill-bar-track">
+                                <div class="skill-bar-fill" data-width="72"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category reveal">
+                    <div class="category-icon">🛠️</div>
+                    <h3>Tools</h3>
+                    <div class="tool-icons">
+                        <div class="tool-icon"><span>🐙</span>
+                            <p>GitHub</p>
+                        </div>
+                        <div class="tool-icon"><span>🖥️</span>
+                            <p>VS Code</p>
+                        </div>
+                        <div class="tool-icon"><span>📱</span>
+                            <p>Android Studio</p>
+                        </div>
+                        <div class="tool-icon"><span>🔥</span>
+                            <p>Firebase</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Projects</span>
+                <h2 class="section-title">What I've Built</h2>
+            </div>
+            <div class="projects-grid">
+
+                <!-- Project 1: Calculator App -->
+                <div class="project-card reveal">
+                    <div class="project-glow"></div>
+                    <div class="project-number">01</div>
+                    <div class="project-icon">🔢</div>
+                    <h3 class="project-title">Calculator App</h3>
+                    <p class="project-desc">
+                        A fully functional Android calculator application supporting
+                        arithmetic operations with real-time calculations.
+                    </p>
+                    <div class="project-features">
+                        <span>✅ Basic Arithmetic Operations</span>
+                        <span>✅ Real-time Calculation</span>
+                        <span>✅ Clean UI</span>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-badge">Java</span>
+                        <span class="tech-badge">Android Studio</span>
+                        <span class="tech-badge">Material Design</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Project →</a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Gyroscope Level App -->
+                <div class="project-card reveal">
+                    <div class="project-glow"></div>
+                    <div class="project-number">02</div>
+                    <div class="project-icon">📐</div>
+                    <h3 class="project-title">Gyroscope Level App</h3>
+                    <p class="project-desc">
+                        An Android sensor-based application that measures surface
+                        alignment using the device's gyroscope sensor.
+                    </p>
+                    <div class="project-features">
+                        <span>✅ Real-time Angle Detection</span>
+                        <span>✅ Sensor Integration</span>
+                        <span>✅ Accurate Level Measurement</span>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-badge">Java</span>
+                        <span class="tech-badge">Android Sensors</span>
+                        <span class="tech-badge">SensorManager API</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Project →</a>
+                    </div>
+                </div>
+
+                <!-- Project 3: Shake Detector App -->
+                <div class="project-card reveal">
+                    <div class="project-glow"></div>
+                    <div class="project-number">03</div>
+                    <div class="project-icon">📳</div>
+                    <h3 class="project-title">Shake Detector App</h3>
+                    <p class="project-desc">
+                        Android application that detects shake motion using accelerometer
+                        sensor and triggers custom actions.
+                    </p>
+                    <div class="project-features">
+                        <span>✅ Shake Detection</span>
+                        <span>✅ Motion Threshold Logic</span>
+                        <span>✅ Event-based Trigger</span>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-badge">Java</span>
+                        <span class="tech-badge">Accelerometer Sensor</span>
+                        <span class="tech-badge">Android SDK</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Project →</a>
+                    </div>
+                </div>
+
+                <!-- Project 4: Weather Finder App -->
+                <div class="project-card reveal">
+                    <div class="project-glow"></div>
+                    <div class="project-number">04</div>
+                    <div class="project-icon">🌤️</div>
+                    <h3 class="project-title">Weather Finder App</h3>
+                    <p class="project-desc">
+                        A weather application that fetches real-time weather data
+                        using REST API integration.
+                    </p>
+                    <div class="project-features">
+                        <span>✅ Live Weather Updates</span>
+                        <span>✅ Temperature &amp; Humidity Display</span>
+                        <span>✅ Location-based Data</span>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-badge">Java</span>
+                        <span class="tech-badge">REST API</span>
+                        <span class="tech-badge">JSON Parsing</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Project →</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EDUCATION ===== -->
+    <!-- ===== EDUCATION & EXPERIENCE ===== -->
+<section id="education" class="section edu-exp">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="section-tag">Journey</span>
+      <h2 class="section-title">Education & Experience</h2>
+      <p class="section-subtitle">My academic background and real-world industry exposure</p>
+    </div>
+
+    <div class="edu-exp-grid">
+
+      <!-- ── LEFT COLUMN: EDUCATION ── -->
+      <div class="edu-exp-col reveal">
+        <div class="edu-exp-col-header">
+          <div class="col-icon">🎓</div>
+          <h3 class="col-title">Education</h3>
+        </div>
+
+        <div class="timeline-card">
+          <div class="timeline-card-dot"></div>
+          <div class="timeline-badge">🎓 Currently Pursuing</div>
+          <h4>B.Tech in Information Technology</h4>
+          <p class="tc-semester">Semester 6 · 2023 – Present</p>
+          <p class="tc-desc">
+            Focusing on Android Development, Java programming, database
+            management, and AI applications. Building real-world mobile apps
+            that solve meaningful problems — from sensor-driven utilities to
+            REST API-powered tools.
+          </p>
+          <div class="tc-tags">
+            <span>Android Dev</span>
+            <span>Data Structures</span>
+            <span>DBMS</span>
+            <span>Sensor Programming</span>
+            <span>REST APIs</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── RIGHT COLUMN: EXPERIENCE ── -->
+      <div class="edu-exp-col reveal">
+        <div class="edu-exp-col-header">
+          <div class="col-icon">💼</div>
+          <h3 class="col-title">Experience</h3>
+        </div>
+
+        <div class="timeline-card exp-card-combined">
+          <div class="timeline-card-dot"></div>
+
+          <!-- Company header -->
+          <div class="exp-top">
+            
+            <div>
+              <h4 class="exp-company-name">Kryosync</h4>
+              <p class="exp-role-title">Application Development Intern</p>
+            </div>
+          </div>
+
+          <!-- Badges -->
+          <div class="exp-badges-row">
+            <span class="exp-badge badge-type">🏢 On-site</span>
+            <span class="exp-badge badge-duration">⏱ 2 Weeks</span>
+            <span class="exp-badge badge-location">📍 Bhavnagar </span>
+            <span class="exp-badge badge-cert">🏅 Certified</span>
+          </div>
+
+          <!-- Date -->
+          <p class="exp-date-line">Jun 02 – Jun 20, 2025</p>
+
+          <!-- Description -->
+          <p class="tc-desc">
+            Successfully completed a two-week internship in Application
+            Development at <strong>Kryosync</strong>. Gained hands-on
+            experience in real-world software development workflows and
+            enhanced problem-solving skills.
+          </p>
+
+          <!-- Responsibilities -->
+          <p class="exp-sub-heading">📋 Responsibilities</p>
+          <ul class="exp-resp-list">
+            <li>Assisted in Android application development</li>
+            <li>Worked on debugging and improving app performance</li>
+            <li>Collaborated with team on feature implementation</li>
+            <li>Learned industry-level development practices</li>
+          </ul>
+
+          <!-- Skills gained -->
+          <p class="exp-sub-heading">🚀 Skills Gained</p>
+          <div class="exp-skill-tags">
+            <span>Application Development</span>
+            <span>Team Collaboration</span>
+            <span>Problem Solving</span>
+            <span>Debugging</span>
+            <span>SDLC</span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Contact</span>
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-subtitle">Have a project idea or just want to say hi? Drop a message!</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <div class="contact-card">
+                        <div class="contact-icon">📧</div>
+                        <h4>Email</h4>
+                        <a href="mailto:chetanbavaliya420@gmail.com">chetanbavaliya420@gmail.com</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">🐙</div>
+                        <h4>GitHub</h4>
+                        <a href="https://github.com/Chetanbavaliya123" target="_blank">github.com/chetanbavaliya</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">💼</div>
+                        <h4>LinkedIn</h4>
+                        <a href="https://www.linkedin.com/in/chetan-bavaliya-87b7312b9" target="_blank">linkedin.com/in/chetanbavaliya</a>
+                    </div>
+                </div>
+
+                <form class="contact-form reveal" id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Alex Morgan" required />
+                        <span class="form-error" id="nameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Alex@example.com" required />
+                        <span class="form-error" id="emailError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Project Collaboration" required />
+                        <span class="form-error" id="subjectError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
+                            required></textarea>
+                        <span class="form-error" id="messageError"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13" />
+                            <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                        </svg>
+                        Send Message
+                    </button>
+                    <div class="form-success" id="formSuccess">✅ Message sent successfully! I'll get back to you soon.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-logo"><span class="logo-bracket">&lt;</span>CB<span class="logo-bracket">/&gt;</span>
+                </p>
+                <p class="footer-copy">© 2025 Chetan Bavaliya. Crafted with ❤️ and ☕</p>
+                <div class="footer-links">
+                    <a href="https://github.com/Chetanbavaliya123/" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/chetan-bavaliya-87b7312b9" target="_blank">LinkedIn</a>
+                    <a href="mailto:chetanbavaliya420@gmail.com">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
